@@ -124,8 +124,8 @@ function App() {
   const [valorDiretoHNT, setValorDiretoHNT] = useState('');
 
   const getTabelaAtiva = () => {
-    const esZonaNorte = (empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte') || empresaSelecionada === 'HNT';
-    return esZonaNorte ? TABELA_ZONA_NORTE : TABELA_PRECOS;
+    const estaAceiteZonaNorte = empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte';
+    return estaAceiteZonaNorte ? TABELA_ZONA_NORTE : TABELA_PRECOS;
   };
   const empresaFinal = empresaSelecionada === 'Outra' 
     ? (empresaManual || 'Outra Empresa') 
@@ -282,10 +282,6 @@ function App() {
         return tabela[bairro] || 0;
     }
   }
-
-  
-const esZonaNorte = (empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte') || empresaSelecionada === 'HNT';
-const tabelaAtiva = esZonaNorte ? TABELA_ZONA_NORTE : TABELA_PRECOS;
 
   const salvarDiaNaSemana = () => {
     console.debug('salvarDiaNaSemana: iniciado', { nomeMotoboy, empresaSelecionada, diaSemana, modoDireto, listaEntregasDia });
