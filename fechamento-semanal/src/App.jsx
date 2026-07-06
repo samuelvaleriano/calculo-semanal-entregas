@@ -4,6 +4,7 @@ import logoPerfil from '/public/logo.jpg';
 import logoMamaRoma from '/public/logoMAMAROMO.jpg';
 import logoAceite from '/public/logoACEITE.jpg';
 import logoHNT from '/public/logoHNT.jpg';
+import logoBents from '/public/logoBENTS.jpg';
 import logoDefault from '/public/logo.jpg';
 
 
@@ -42,6 +43,56 @@ const TABELA_PRECOS = {
   "Vila Alpina": 15.00, "Vila Ideal": 15.00, "Vila Olavo Costa": 15.00, "Vila Ozanan": 15.00,
   "Vina Del Mar": 22.00, "Vitorino Braga": 14.00, "Vivendas da Serra": 20.00
 };
+const TABELA_ZONA_NORTE = {
+  "Adolfo Vireque": 17.00, "Grajaú": 13.00, "Sagrado C Jesus": 20.00, 
+  "Aeroporto": 19.00, "Grambery": 13.00, "Salvaterra": 18.00, 
+  "Alto dos Passos": 14.00, "Graminha": 18.00, "Santa Cândida": 15.00, 
+  "Alto dos Pinheiros": 17.00, "Granville": 17.00, "Santa Catarina": 11.00, 
+  "Aracy": 15.00, "Guaruá": 15.00, "Santa Cecília": 14.00, 
+  "Arco Iris": 20.00, "Ipiranga": 15.00, "Santa Luzia": 17.00, 
+  "Bairu": 12.00, "Guadalajara": 18.00, "Santa Efigênia": 20.00, 
+  "Bandeirantes": 13.00, "Industrial": 10.00, "Santa Paula": 15.00, 
+  "Bela Aurora": 20.00, "Itatiaia": 17.00, "Santa Rita": 14.00, 
+  "Boa Vista": 15.00, "Jardim de Alá": 18.00, "Santa Helena": 13.00, 
+  "Bom Clima": 12.00, "Jardim América": 18.00, "Santa Teresa": 15.00, 
+  "Bom Jardim": 15.00, "Jardim Casa Blanca": 17.00, "Santa Terezinha": 9.00, 
+  "Bom Passtor": 15.00, "Jardim Laranjeiras": 15.00, "Santo Antônio": 20.00, 
+  "Bonfim": 14.00, "Jardim da Serra": 22.00, "Santos Anjos": 13.00, 
+  "Borboleta": 15.00, "Jardim Imperador": 17.00, "Santos Dumont": 18.00, 
+  "Borborema": 15.00, "Jardins Imperiais": 17.00, "São Benedito": 15.00, 
+  "Bosque do Imperador": 20.00, "Jardim do Sol": 16.00, "São Bernardo": 15.00, 
+  "Bosque dos Pinheiros": 16.00, "Jardim Gaúcho": 16.00, "São Clemente": 15.00, 
+  "Bosque Imperial": 17.00, "Jardim Glória": 11.00, "São Dimas": 9.00, 
+  "Caiçaras": 20.00, "Jk": 15.00, "São Sebastião": 15.00, 
+  "Carlos Chagas": 10.00, "Linhares": 22.00, "São Geraldo": 20.00, 
+  "Cascatinha": 15.00, "Lourdes": 16.00, "São Mateus": 15.00, 
+  "Centenário": 12.00, "Manoel Honório": 11.00, "São Pedro": 17.00, 
+  "Centro": 12.00, "Ladeira": 11.00, "Solidariedade": 15.00, 
+  "Cerâmica": 9.00, "Mariano Procópio": 9.00, "Spina Ville": 20.00, 
+  "Cerro Azul": 16.00, "Marilândia": 19.00, "Teixeiras": 17.00, 
+  "Cesário Alvim": 15.00, "Martelos": 17.00, "Tiguera": 15.00, 
+  "Chales do Imperador": 17.00, "Marumbi": 13.00, "UFJF": 15.00, 
+  "Chales dos Algares": 17.00, "Monte Castelo": 13.00, "Tupã": 16.00, 
+  "Cidade Jardim": 15.00, "Morro do Imperador": 17.00, "Vale da Serra": 25.00, 
+  "Cidade Nova": 17.00, "Mundo Novo": 14.00, "Vale do Ipê": 11.00, 
+  "Colinas do Imperador": 20.00, "N. Sra. Aparecida": 13.00, "Vale Verde": 20.00, 
+  "Cond. Jardim da Serra": 22.00, "N. Sra. das Graças": 13.00, "Vila Alpina": 15.00, 
+  "Costa Carvalho": 13.00, "N. Sra. de Fátima": 17.00, "Vila Ideal": 15.00, 
+  "Cruzeiro do Sul": 15.00, "Nova Califórnia": 22.00, "Vila Olavo Costa": 15.00, 
+  "Democrata": 9.00, "Novo Horizonte": 20.00, "Vila Ozanan": 15.00, 
+  "Dom Orione": 17.00, "Paineiras": 13.00, "Vitorino Braga": 14.00, 
+  "Eldorado": 12.00, "Parque Imperial": 17.00, "Vivendas da Serra": 15.00, 
+  "Dom Bosco": 14.00, "Parque Burnier": 16.00, "Vina Del Mar": 22.00, 
+  "Esplanada": 12.00, "Pq. Da Lajinha": 20.00, "Dom Juan": 17.00, 
+  "Estrela Sul": 15.00, "Poço Rico": 13.00, "São Tarcisio": 15.00, 
+  "Fazendinha Ipiranga": 25.00, "Previdenciários": 20.00, "Nova era": 25.00, 
+  "Fábrica": 10.00, "Progresso": 15.00, "Cidade do Sol": 20.00, 
+  "Furtado Menezes": 15.00, "Quintas Avenida": 12.00, "Barbosa Lage": 15.00, 
+  "Recanto da Mata": 20.00, "Distrito Industrial": 32.00, "Parque Independ.": 30.00, 
+  "Santa Cruz": 25.00, "Barreira": 35.00, "Granjas Betânia": 17.00, 
+  "Benfica": 28.00, "Náutico": 50.00, "Recanto dos Lagos": 20.00,
+  "Nova Benfica": 30.00, "Grama": 30.00, "BR": 1.20 
+};
 
 const DIAS_DA_SEMANA = ['Seg', 'Ter', 'Qua', 'Qui', 'Sex', 'Sáb', 'Dom'];
 
@@ -67,9 +118,21 @@ function App() {
   const [dadosTemporarios, setDadosTemporarios] = useState([]);
   const [errosCampos, setErrosCampos] = useState({});
   const [avisoErroGeral, setAvisoErroGeral] = useState('');
-  const empresaFinal = empresaSelecionada === 'Outra' ? (empresaManual || 'Outra Empresa') : empresaSelecionada;
+  const [unidadeAceite, setUnidadeAceite] = useState('São Mateus');
+  const [empresaCorridaZonaNorte, setEmpresaCorridaZonaNorte] = useState('Aceite');
+  const [qtdDiretoHNT, setQtdDiretoHNT] = useState('');
+  const [valorDiretoHNT, setValorDiretoHNT] = useState('');
+
+  const getTabelaAtiva = () => {
+    const esZonaNorte = (empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte') || empresaSelecionada === 'HNT';
+    return esZonaNorte ? TABELA_ZONA_NORTE : TABELA_PRECOS;
+  };
+  const empresaFinal = empresaSelecionada === 'Outra' 
+    ? (empresaManual || 'Outra Empresa') 
+    : (empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte' ? 'Aceite + HNT (ZN)' : empresaSelecionada);
+
   const nomeEmpresaLimpo = empresaFinal ? empresaFinal.trim().toLowerCase() : '';
-  const usaTabelaAutomatica = nomeEmpresaLimpo === 'aceite' || nomeEmpresaLimpo === 'hnt' || empresaSelecionada === 'Outra';
+  const usaTabelaAutomatica = nomeEmpresaLimpo === 'aceite' || nomeEmpresaLimpo === 'hnt' || nomeEmpresaLimpo === 'aceite + hnt (zn)' || empresaSelecionada === 'Outra';
 
   useEffect(() => {
     try {
@@ -157,20 +220,23 @@ function App() {
     if (emp === 'mama roma') return `🍝 *MAMA ROMA*`;
     if (emp === 'aceite') return `🥗 *ACEITE*`;
     if (emp === 'hnt') return `🍗 *HNT*`;
+    if (emp === 'bents') return `🍔 *BENTS*`;
+    if (emp.includes('aceite + hnt')) return `🥗🍗 *ACEITE + HNT (ZN)*`;
     return `🏢 *${nomeEmpresa.toUpperCase()}*`;
   };
 
   const obterPrecoBairro = (bairro) => {
-    let precoBase = TABELA_PRECOS[bairro] || 0;
+    const tabela = getTabelaAtiva();
+    let precoBase = tabela[bairro] || 0;
     if (nomeEmpresaLimpo === 'hnt' && bairro === 'São Mateus') {
       return precoBase + 1.00; 
     }
     return precoBase;
   };
 
-  const sugeridos = buscaBairro.trim() === '' 
-    ? [] 
-    : Object.keys(TABELA_PRECOS).filter(b => 
+  const sugeridos = buscaBairro.trim() === ''
+    ? []
+    : Object.keys(getTabelaAtiva()).filter(b =>
         b.toLowerCase().includes(buscaBairro.toLowerCase())
       ).slice(0, 5);
 
@@ -191,12 +257,38 @@ function App() {
       return;
     }
     setErrosCampos(prev => ({ ...prev, valorEntrega: false, listaEntregasDia: false }));
-    setListaEntregasDia([...listaEntregasDia, parseFloat(valorEntrega)]);
+    
+    const empresaVinculo = (empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte') 
+      ? empresaCorridaZonaNorte 
+      : empresaFinal;
+
+    setListaEntregasDia([...listaEntregasDia, { valor: parseFloat(valorEntrega), empresa: empresaVinculo }]);
     setValorEntrega('');
     setBairroSelecionado('');
   };
+  function calcularValorUnidade(unidade, bairro, deveTirarTaxa, taxaEmpresa) {
+    let valorBase = 0;
+    if (unidade && unidade.trim().toLowerCase() === "jardim norte") {
+      const precoBairro = TABELA_ZONA_NORTE[bairro];
+      if (precoBairro !== undefined) {
+        valorBase = precoBairro;
+      }
+      if (deveTirarTaxa) {
+        valorBase -= taxaEmpresa;
+      }
+      return Math.max(0, valorBase);
+    } else {
+        const tabela = getTabelaAtiva();
+        return tabela[bairro] || 0;
+    }
+  }
+
+  
+const esZonaNorte = (empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte') || empresaSelecionada === 'HNT';
+const tabelaAtiva = esZonaNorte ? TABELA_ZONA_NORTE : TABELA_PRECOS;
 
   const salvarDiaNaSemana = () => {
+    console.debug('salvarDiaNaSemana: iniciado', { nomeMotoboy, empresaSelecionada, diaSemana, modoDireto, listaEntregasDia });
     let novosErros = {};
     setAvisoErroGeral('');
 
@@ -207,18 +299,46 @@ function App() {
 
     let brutoDia = 0;
     let qtdEntregas = 0;
+    let descontoFinal = 0;
+    let liquidoDia = 0;
+    let garantidoAplicado = false;
+    let brutoAceite = 0;
+    let qtdAceite = 0;
+    let brutoHNT = 0;
+    let qtdHNT = 0;
+    let liqAceite = 0;
+    let liqHNT = 0;
+    let descontoAceite = 0;
+    let descontoHNT = 0;
 
-    if (modoDireto) {
-      if (!qtdDireto || isNaN(qtdDireto) || parseFloat(qtdDireto) <= 0) novosErros.qtdDireto = true;
-      if (!valorDireto || isNaN(valorDireto) || parseFloat(valorDireto) <= 0) novosErros.valorDireto = true;
+    if (empresaSelecionada === 'Bents') {
+      if (!qtdDireto || isNaN(qtdDireto) || parseFloat(qtdDireto) < 0) novosErros.qtdDireto = true;
+    } else if (empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte') {
+      if (modoDireto) {
+        if (!qtdDireto || isNaN(qtdDireto) || parseFloat(qtdDireto) < 0) novosErros.qtdDireto = true;
+        if (!valorDireto || isNaN(valorDireto) || parseFloat(valorDireto) < 0) novosErros.valorDireto = true;
+        if (!qtdDiretoHNT || isNaN(qtdDiretoHNT) || parseFloat(qtdDiretoHNT) < 0) novosErros.qtdDiretoHNT = true;
+        if (!valorDiretoHNT || isNaN(valorDiretoHNT) || parseFloat(valorDiretoHNT) < 0) novosErros.valorDiretoHNT = true;
+      } else {
+        if (listaEntregasDia.length === 0) {
+          novosErros.listaEntregasDia = true;
+          if (valorEntrega) novosErros.lembreteBotao = true; 
+        }
+      }
     } else {
-      if (listaEntregasDia.length === 0) {
-        novosErros.listaEntregasDia = true;
-        if (valorEntrega) novosErros.lembreteBotao = true; 
+      if (modoDireto) {
+        if (!qtdDireto || isNaN(qtdDireto) || parseFloat(qtdDireto) <= 0) novosErros.qtdDireto = true;
+        if (!valorDireto || isNaN(valorDireto) || parseFloat(valorDireto) <= 0) novosErros.valorDireto = true;
+      } else {
+        if (listaEntregasDia.length === 0) {
+          novosErros.listaEntregasDia = true;
+          if (valorEntrega) novosErros.lembreteBotao = true; 
+        }
       }
     }
 
     if (Object.keys(novosErros).length > 0) {
+      console.debug('salvarDiaNaSemana: validação falhou', novosErros);
       setErrosCampos(novosErros);
       if (novosErros.lembreteBotao) {
         setAvisoErroGeral('⚠️ Atenção: Você digitou um valor mas não clicou no botão de "Incluir Corrida"!');
@@ -231,42 +351,134 @@ function App() {
     setErrosCampos({});
     setAvisoErroGeral('');
 
-    if (modoDireto) {
+    if (empresaSelecionada === 'Bents') {
       qtdEntregas = parseInt(qtdDireto) || 0;
-      brutoDia = parseFloat(valorDireto) || 0;
-    } else {
-      qtdEntregas = listaEntregasDia.length;
-      brutoDia = listaEntregasDia.reduce((total, valor) => total + valor, 0);
-    }
-
-    const descontoPadrao = brutoDia * (porcentagem / 100);
-    let liquidoDia = brutoDia - descontoPadrao;
-    let descontoFinal = descontoPadrao;
-    let garantidoAplicado = false;
-
-    if (nomeEmpresaLimpo === 'mama roma') {
-      const ehAlmocoMeioSemana = ['Seg', 'Ter', 'Qua', 'Qui'].includes(diaSemana) && turno === 'Dia';
-      if (!ehAlmocoMeioSemana && liquidoDia < 80.00) {
-        liquidoDia = 80.00;
+      brutoDia = 60.00 + (qtdEntregas * 8.00);
+      const descontoPadrao = brutoDia * (porcentagem / 100);
+      liquidoDia = brutoDia - descontoPadrao;
+      
+      const ehFimDeSemana = ['Sáb', 'Dom'].includes(diaSemana);
+      const minimoGarantido = ehFimDeSemana ? 100.00 : 80.00;
+      
+      if (liquidoDia < minimoGarantido) {
+        liquidoDia = minimoGarantido;
         garantidoAplicado = true;
-        descontoFinal = Math.max(0, brutoDia - 80.00);
+        descontoFinal = Math.max(0, brutoDia - minimoGarantido);
+      } else {
+        descontoFinal = descontoPadrao;
+      }
+    } 
+
+    else if (empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte') {
+      if (modoDireto) {
+        qtdAceite = parseInt(qtdDireto) || 0;
+        brutoAceite = parseFloat(valorDireto) || 0;
+        qtdHNT = parseInt(qtdDiretoHNT) || 0;
+        brutoHNT = parseFloat(valorDiretoHNT) || 0;
+      } else {
+        qtdAceite = listaEntregasDia.filter(i => i.empresa === 'Aceite').length;
+        brutoAceite = listaEntregasDia.filter(i => i.empresa === 'Aceite').reduce((a, b) => a + b.valor, 0);
+        qtdHNT = listaEntregasDia.filter(i => i.empresa === 'HNT').length;
+        brutoHNT = listaEntregasDia.filter(i => i.empresa === 'HNT').reduce((a, b) => a + b.valor, 0);
+      }
+
+      const taxa = porcentagem / 100;
+
+      const afterAceite = brutoAceite * (1 - taxa);
+      if (afterAceite >= 45.00) {
+        liqAceite = afterAceite;
+        descontoAceite = Math.max(0, brutoAceite - liqAceite);
+      } else {
+        liqAceite = 45.00;
+        descontoAceite = Math.max(0, brutoAceite - 45.00);
+        garantidoAplicado = true;
+      }
+
+      const afterHNT = brutoHNT * (1 - taxa);
+      if (afterHNT >= 45.00) {
+        liqHNT = afterHNT;
+        descontoHNT = Math.max(0, brutoHNT - liqHNT);
+      } else {
+        liqHNT = 45.00;
+        descontoHNT = Math.max(0, brutoHNT - 45.00);
+        garantidoAplicado = true;
+      }
+
+      brutoDia = brutoAceite + brutoHNT;
+      qtdEntregas = qtdAceite + qtdHNT;
+      liquidoDia = liqAceite + liqHNT;
+      descontoFinal = descontoAceite + descontoHNT;
+    } 
+   
+    else {
+      if (modoDireto) {
+        qtdEntregas = parseInt(qtdDireto) || 0;
+        brutoDia = parseFloat(valorDireto) || 0;
+      } else {
+        qtdEntregas = listaEntregasDia.length;
+        brutoDia = listaEntregasDia.reduce((total, item) => total + item.valor, 0);
+      }
+
+      const descontoPadrao = brutoDia * (porcentagem / 100);
+      liquidoDia = brutoDia - descontoPadrao;
+      descontoFinal = descontoPadrao;
+
+      if (nomeEmpresaLimpo === 'mama roma') {
+        const ehAlmocoMeioSemana = ['Seg', 'Ter', 'Qua', 'Qui'].includes(diaSemana) && turno === 'Dia';
+        if (!ehAlmocoMeioSemana && liquidoDia < 80.00) {
+          liquidoDia = 80.00;
+          garantidoAplicado = true;
+          descontoFinal = Math.max(0, brutoDia - 80.00);
+        }
       }
     }
 
-    const novoDia = {
-      empresa: empresaFinal,
-      diaSemana,
-      turno,
-      textoTurno: turno === 'Dia' ? 'Almoço' : 'Jantar',
-      qtdEntregas,
-      bruto: brutoDia,
-      desconto: descontoFinal,
-      liquido: liquidoDia,
-      taxaCobrada: porcentagem,
-      garantido: garantidoAplicado
-    };
+      const novoDia = empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte'
+        ? {
+            empresa: empresaFinal,
+            diaSemana,
+            turno,
+            textoTurno: turno === 'Dia' ? 'Almoço' : 'Jantar',
+            qtdEntregas,
+            bruto: brutoDia,
+            desconto: descontoFinal,
+            liquido: liquidoDia,
+            taxaCobrada: porcentagem,
+            garantido: garantidoAplicado,
+            detalhe: {
+              aceite: {
+                qtd: qtdAceite,
+                bruto: brutoAceite,
+                liquido: liqAceite,
+                garantido: liqAceite === 45.00
+              },
+              hnt: {
+                qtd: qtdHNT,
+                bruto: brutoHNT,
+                liquido: liqHNT,
+                garantido: liqHNT === 45.00
+              }
+            }
+          }
+        : {
+            empresa: empresaFinal,
+            diaSemana,
+            turno,
+            textoTurno: turno === 'Dia' ? 'Almoço' : 'Jantar',
+            qtdEntregas,
+            bruto: brutoDia,
+            desconto: descontoFinal,
+            liquido: liquidoDia,
+            taxaCobrada: porcentagem,
+            garantido: garantidoAplicado
+          };
 
-    setSemana([...semana, novoDia]);
+    console.debug('salvarDiaNaSemana: adicionando novoDia', novoDia);
+    setSemana(prev => {
+      const next = [...prev, novoDia];
+      console.debug('salvarDiaNaSemana: semana atualizada', next);
+      return next;
+    });
     
     setEmpresaSelecionada('');
     setEmpresaManual('');
@@ -275,7 +487,11 @@ function App() {
     setListaEntregasDia([]);
     setQtdDireto('');
     setValorDireto('');
+    setQtdDiretoHNT('');
+    setValorDiretoHNT('');
     setModoDireto(false);
+    setUnidadeAceite('São Mateus');
+    console.debug('salvarDiaNaSemana: finalizado');
   };
 
   const totalDescontoSemana = semana.reduce((acc, dia) => acc + (Number(dia.desconto) || 0), 0);
@@ -288,13 +504,19 @@ function App() {
     semana.forEach((d) => {
       const indicadorEmpresa = obterIndicadorWhatsApp(d.empresa);
       texto += `📅 *${d.diaSemana} (${d.textoTurno === 'Almoço' ? '☀️ Almoço' : '🌙 Jantar'})* — ${indicadorEmpresa}\n`;
-      texto += `• Entregas: ${d.qtdEntregas}\n`;
-      texto += `• Taxa Retida: R$ ${(d.desconto || 0).toFixed(2)}\n`;
-      
-      if (d.garantido) {
-        texto += `• Valor Líquido: R$ ${(d.liquido || 0).toFixed(2)} 🔥 (Diária Garantida)\n\n`;
-      } else {
+      if (d.detalhe && d.detalhe.aceite) {
+        texto += `• Aceite: ${d.detalhe.aceite.qtd} corr. — Bruto: R$ ${Number(d.detalhe.aceite.bruto || 0).toFixed(2)} — Líq: R$ ${Number(d.detalhe.aceite.liquido || 0).toFixed(2)} ${d.detalhe.aceite.garantido ? '🔥 (Garantido)' : ''}\n`;
+        texto += `• HNT: ${d.detalhe.hnt.qtd} corr. — Bruto: R$ ${Number(d.detalhe.hnt.bruto || 0).toFixed(2)} — Líq: R$ ${Number(d.detalhe.hnt.liquido || 0).toFixed(2)} ${d.detalhe.hnt.garantido ? '🔥 (Garantido)' : ''}\n`;
+        texto += `• Taxa Retida: R$ ${(d.desconto || 0).toFixed(2)}\n`;
         texto += `• Valor Líquido: R$ ${(d.liquido || 0).toFixed(2)}\n\n`;
+      } else {
+        texto += `• Entregas: ${d.qtdEntregas}\n`;
+        texto += `• Taxa Retida: R$ ${(d.desconto || 0).toFixed(2)}\n`;
+        if (d.garantido) {
+          texto += `• Valor Líquido: R$ ${(d.liquido || 0).toFixed(2)} 🔥 (Diária Garantida)\n\n`;
+        } else {
+          texto += `• Valor Líquido: R$ ${(d.liquido || 0).toFixed(2)}\n\n`;
+        }
       }
     });
     
@@ -316,37 +538,20 @@ function App() {
     <div className="container">
       
       {mostrarModal && (
-        <div style={{
-          position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-          backgroundColor: 'rgba(0, 0, 0, 0.85)', display: 'flex', justifyContent: 'center',
-          alignItems: 'center', zIndex: 9999, padding: '20px', boxSizing: 'border-box'
-        }}>
-          <div style={{
-            backgroundColor: '#202024', borderRadius: '12px', padding: '25px',
-            maxWidth: '450px', width: '100%', border: '2px solid #ff9000',
-            textAlign: 'center', boxShadow: '0 10px 25px rgba(0,0,0,0.5)', color: '#fff'
-          }}>
-            <h2 style={{ color: '#ff9000', marginTop: 0, fontSize: '22px' }}>📋 Progresso Encontrado!</h2>
-            <p style={{ fontSize: '15px', lineHeight: '1.5', color: '#c4c4cc' }}>
+        <div className="modal-overlay">
+          <div className="modal-card medium">
+            <h2 className="modal-title warning">📋 Progresso Encontrado!</h2>
+            <p className="modal-text">
               Identificamos um fechamento de entregas em andamento que não foi concluído. Como deseja prosseguir?
             </p>
-            <div style={{
-              margin: '20px 0', padding: '10px', backgroundColor: '#121214',
-              borderRadius: '8px', fontSize: '13px', textAlign: 'left', borderLeft: '4px solid #ff9000'
-            }}>
+            <div className="modal-note">
               <b>Lançamentos pendentes:</b> {dadosTemporarios?.length || 0} períodos registrados.
             </div>
-            <div style={{ display: 'flex', gap: '12px', marginTop: '25px' }}>
-              <button onClick={aceitarRecuperacao} style={{
-                flex: 1, padding: '12px', backgroundColor: '#00b37e', color: '#fff',
-                border: 'none', borderRadius: '6px', fontWeight: 'bold', cursor: 'pointer', fontSize: '14px'
-              }}>
+            <div className="modal-actions">
+              <button onClick={aceitarRecuperacao} className="modal-btn success">
                 Continuar 👍
               </button>
-              <button onClick={recusarRecuperacao} style={{
-                flex: 1, padding: '12px', backgroundColor: '#f75a68', color: '#fff',
-                border: 'none', borderRadius: '6px', fontWeight: 'bold', cursor: 'pointer', fontSize: '14px'
-              }}>
+              <button onClick={recusarRecuperacao} className="modal-btn danger">
                 Limpar do Zero 🗑️
               </button>
             </div>
@@ -355,32 +560,18 @@ function App() {
       )}
 
       {modalExcluirDia.visivel && (
-        <div style={{
-          position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-          backgroundColor: 'rgba(0, 0, 0, 0.85)', display: 'flex', justifyContent: 'center',
-          alignItems: 'center', zIndex: 9999, padding: '20px', boxSizing: 'border-box'
-        }}>
-          <div style={{
-            backgroundColor: '#202024', borderRadius: '12px', padding: '25px',
-            maxWidth: '400px', width: '100%', border: '2px solid #f75a68',
-            textAlign: 'center', boxShadow: '0 10px 25px rgba(0,0,0,0.5)', color: '#fff'
-          }}>
-            <h3 style={{ color: '#f75a68', marginTop: 0 }}>🗑️ Remover Lançamento?</h3>
-            <p style={{ fontSize: '14px', color: '#c4c4cc', lineHeight: '1.4' }}>
+        <div className="modal-overlay">
+          <div className="modal-card small">
+            <h3 className="modal-title danger">🗑️ Remover Lançamento?</h3>
+            <p className="modal-text">
               Tem certeza que deseja apagar o registro de: <br/>
-              <strong style={{ color: '#fff', display: 'block', marginTop: '8px', fontSize: '15px' }}>{modalExcluirDia.info}</strong>
+              <strong className="modal-highlight">{modalExcluirDia.info}</strong>
             </p>
-            <div style={{ display: 'flex', gap: '12px', marginTop: '25px' }}>
-              <button onClick={confirmarExclusaoDia} style={{
-                flex: 1, padding: '11px', backgroundColor: '#f75a68', color: '#fff',
-                border: 'none', borderRadius: '6px', fontWeight: 'bold', cursor: 'pointer'
-              }}>
+            <div className="modal-actions">
+              <button onClick={confirmarExclusaoDia} className="modal-btn danger">
                 Sim, Excluir
               </button>
-              <button onClick={() => setModalExcluirDia({ visivel: false, index: null, info: '' })} style={{
-                flex: 1, padding: '11px', backgroundColor: '#29292e', color: '#e1e1e6',
-                border: 'none', borderRadius: '6px', fontWeight: 'bold', cursor: 'pointer'
-              }}>
+              <button onClick={() => setModalExcluirDia({ visivel: false, index: null, info: '' })} className="modal-btn secondary">
                 Cancelar
               </button>
             </div>
@@ -389,31 +580,17 @@ function App() {
       )}
 
       {mostrarModalZerar && (
-        <div style={{
-          position: 'fixed', top: 0, left: 0, width: '100vw', height: '100vh',
-          backgroundColor: 'rgba(0, 0, 0, 0.85)', display: 'flex', justifyContent: 'center',
-          alignItems: 'center', zIndex: 9999, padding: '20px', boxSizing: 'border-box'
-        }}>
-          <div style={{
-            backgroundColor: '#202024', borderRadius: '12px', padding: '25px',
-            maxWidth: '#420px', width: '100%', border: '2px solid #ff9000',
-            textAlign: 'center', boxShadow: '0 10px 25px rgba(0,0,0,0.5)', color: '#fff'
-          }}>
-            <h3 style={{ color: '#ff9000', marginTop: 0 }}>⚠️ Apagar Tudo?</h3>
-            <p style={{ fontSize: '14px', color: '#c4c4cc', lineHeight: '1.5' }}>
+        <div className="modal-overlay">
+          <div className="modal-card warning">
+            <h3 className="modal-title warning">⚠️ Apagar Tudo?</h3>
+            <p className="modal-text">
               Esta ação irá deletar <strong>TODOS</strong> os dias lançados nesta folha de fechamento. Essa operação não pode ser desfeita.
             </p>
-            <div style={{ display: 'flex', gap: '12px', marginTop: '25px' }}>
-              <button onClick={confirmarZerarSemanaCompleta} style={{
-                flex: 1, padding: '11px', backgroundColor: '#f75a68', color: '#fff',
-                border: 'none', borderRadius: '6px', fontWeight: 'bold', cursor: 'pointer'
-              }}>
+            <div className="modal-actions">
+              <button onClick={confirmarZerarSemanaCompleta} className="modal-btn danger">
                 Limpar Tudo 🗑️
               </button>
-              <button onClick={() => setMostrarModalZerar(false)} style={{
-                flex: 1, padding: '11px', backgroundColor: '#29292e', color: '#e1e1e6',
-                border: 'none', borderRadius: '6px', fontWeight: 'bold', cursor: 'pointer'
-              }}>
+              <button onClick={() => setMostrarModalZerar(false)} className="modal-btn secondary">
                 Voltar
               </button>
             </div>
@@ -435,15 +612,11 @@ function App() {
           placeholder="Digite seu nome completo" 
           value={nomeMotoboy} 
           onChange={(e) => { setNomeMotoboy(e.target.value); setErrosCampos(p => ({...p, nomeMotoboy: false})); }} 
-          className="input-field" 
-          style={{ borderColor: errosCampos?.nomeMotoboy ? '#f75a68' : '', borderWidth: errosCampos?.nomeMotoboy ? '2px' : '' }}
+          className={`input-field ${errosCampos?.nomeMotoboy ? 'error' : ''}`} 
         />
 
         <label>Selecione a Empresa:</label>
-        <div className="company-grid" style={{ 
-          border: errosCampos?.empresaSelecionada ? '2px solid #f75a68' : '2px solid transparent', 
-          borderRadius: '10px', padding: errosCampos?.empresaSelecionada ? '6px' : '0' 
-        }}>
+        <div className={`company-grid ${errosCampos?.empresaSelecionada ? 'error-border' : ''}`}>
           <button type="button" className={`company-card ${empresaSelecionada === 'Mama Roma' ? 'active' : ''}`} onClick={() => { setEmpresaSelecionada('Mama Roma'); setEmpresaManual(''); setErrosCampos(p => ({...p, empresaSelecionada: false})); }}>
             <img src={logoMamaRoma} alt="Mama Roma" className="company-logo-img" />
             <span>Mama Roma</span>
@@ -452,9 +625,13 @@ function App() {
             <img src={logoAceite} alt="Aceite" className="company-logo-img" />
             <span>Aceite</span>
           </button>
-          <button type="button" className={`company-card ${empresaSelecionada === 'HNT' ? 'active' : ''}`} onClick={() => { setEmpresaSelecionada('HNT'); setEmpresaManual(''); setErrosCampos(p => ({...p, empresaSelecionada: false})); }}>
+          <button type="button" className={`company-card ${(empresaSelecionada === 'HNT' || (empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte')) ? 'active' : ''}`} onClick={() => { setEmpresaSelecionada('HNT'); setEmpresaManual(''); setErrosCampos(p => ({...p, empresaSelecionada: false})); }}>
             <img src={logoHNT} alt="HNT" className="company-logo-img" />
             <span>HNT</span>
+          </button>
+          <button type="button" className={`company-card ${empresaSelecionada === 'Bents' ? 'active' : ''}`} onClick={() => { setEmpresaSelecionada('Bents'); setEmpresaManual(''); setErrosCampos(p => ({...p, empresaSelecionada: false})); setModoDireto(true); }}>
+            <img src={logoBents} alt="Bents" className="company-logo-img" />
+            <span>Bents</span>
           </button>
           <button type="button" className={`company-card ${empresaSelecionada === 'Outra' ? 'active' : ''}`} onClick={() => { setEmpresaSelecionada('Outra'); setErrosCampos(p => ({...p, empresaSelecionada: false})); }}>
             <img src={logoDefault} alt="Outra Empresa" className="company-logo-img" />
@@ -462,22 +639,34 @@ function App() {
           </button>
         </div>
 
+        {empresaSelecionada === 'Aceite' && (
+          <div className="company-unit-box">
+            <label className="company-unit-label">📍 Unidade / Região de Atuação:</label>
+            <div className="company-grid">
+              <label className={`shift-chip ${unidadeAceite === 'São Mateus' ? 'selected' : ''} company-unit-option`}>
+                <input className="hidden-input" type="radio" name="unidadeAceite" value="São Mateus" checked={unidadeAceite === 'São Mateus'} onChange={(e) => setUnidadeAceite(e.target.value)} />
+                São Mateus
+              </label>
+              <label className={`shift-chip ${unidadeAceite === 'Zona Norte' ? 'selected' : ''} company-unit-option`}>
+                <input className="hidden-input" type="radio" name="unidadeAceite" value="Zona Norte" checked={unidadeAceite === 'Zona Norte'} onChange={(e) => setUnidadeAceite(e.target.value)} />
+                Zona Norte (Aceite + HNT)
+              </label>
+            </div>
+          </div>
+        )}
+
         {empresaSelecionada === 'Outra' && (
           <input 
             type="text" 
             placeholder="Digite o nome da empresa manualmente" 
             value={empresaManual} 
             onChange={(e) => { setEmpresaManual(e.target.value); setErrosCampos(p => ({...p, empresaManual: false})); }} 
-            className="input-field" 
-            style={{ marginBottom: '15px', borderColor: errosCampos?.empresaManual ? '#f75a68' : '' }} 
+            className={`input-field ${errosCampos?.empresaManual ? 'error' : ''} spaced-input`} 
           />
         )}
         
         <label>Dia da Semana:</label>
-        <div className="days-grid" style={{ 
-          border: errosCampos?.diaSemana ? '2px solid #f75a68' : '2px solid transparent', 
-          borderRadius: '10px', padding: errosCampos?.diaSemana ? '4px' : '0' 
-        }}>
+        <div className={`days-grid ${errosCampos?.diaSemana ? 'error-border' : ''}`}>
           {DIAS_DA_SEMANA.map((dia) => (
             <label key={dia} className={`day-chip ${diaSemana === dia ? 'selected' : ''}`}>
               <input type="radio" name="diaSemana" value={dia} checked={diaSemana === dia} onChange={(e) => { setDiaSemana(e.target.value); setErrosCampos(p => ({...p, diaSemana: false})); }} />
@@ -504,7 +693,7 @@ function App() {
           <label className="radio-label"><input type="radio" name="porcentagem" checked={porcentagem === 20} onChange={() => setPorcentagem(20)} /> 20%</label>
         </div>
 
-        {empresaSelecionada && (
+        {empresaSelecionada && empresaSelecionada !== 'Bents' && (
           <div className="toggle-mode-container">
             <button type="button" className={`toggle-tab ${!modoDireto ? 'active' : ''}`} onClick={() => setModoDireto(false)}>
               Por Corrida
@@ -515,17 +704,47 @@ function App() {
           </div>
         )}
 
-        {empresaSelecionada && (modoDireto ? (
-          <div className="delivery-box border-orange" style={{ border: (errosCampos?.qtdDireto || errosCampos?.valorDireto) ? '2px solid #f75a68' : '' }}>
-            <h4 style={{ margin: '0 0 10px 0', color: '#ff9000' }}>Fechamento Total Direto</h4>
+        {empresaSelecionada === 'Bents' ? (
+          <div className={`delivery-box border-orange ${errosCampos?.qtdDireto ? 'error-border' : ''}`}>
+            <h4 className="section-title">Fechamento Bents</h4>
+            <label>Quantidade de Entregas Realizadas:</label>
+            <input 
+              type="number" 
+              placeholder="Ex: 10" 
+              value={qtdDireto} 
+              onChange={(e) => { setQtdDireto(e.target.value); setErrosCampos(p => ({...p, qtdDireto: false})); }} 
+              className={`input-field ${errosCampos?.qtdDireto ? 'error' : ''} spaced-input`} 
+            />
+            <div className="info-text">
+              <b>Fixo Diário:</b> R$ 60.00 | <b>Valor por Corrida:</b> R$ 8.00
+            </div>
+          </div>
+        ) : empresaSelecionada && (empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte' && modoDireto) ? (
+          <div className={`delivery-box border-orange ${(errosCampos?.qtdDireto || errosCampos?.valorDireto || errosCampos?.qtdDiretoHNT || errosCampos?.valorDiretoHNT) ? 'error-border' : ''}`}>
+            <h4 className="section-title">Fechamento Combinado Zona Norte (Direto)</h4>
+            
+            <h5 className="subsection-title accepted-title">🥗 ACEITE</h5>
+            <label>Qtd Entregas Aceite:</label>
+            <input type="number" placeholder="Ex: 5" value={qtdDireto} onChange={(e) => { setQtdDireto(e.target.value); setErrosCampos(p => ({...p, qtdDireto: false})); }} className={`input-field ${errosCampos?.qtdDireto ? 'error' : ''} compact-input`} />
+            <label>Valor Bruto Aceite (R$):</label>
+            <input type="number" placeholder="Ex: 75.00" value={valorDireto} onChange={(e) => { setValorDireto(e.target.value); setErrosCampos(p => ({...p, valorDireto: false})); }} className={`input-field ${errosCampos?.valorDireto ? 'error' : ''} compact-input`} />
+            
+            <h5 className="subsection-title hnt-title">🍗 HNT</h5>
+            <label>Qtd Entregas HNT:</label>
+            <input type="number" placeholder="Ex: 4" value={qtdDiretoHNT} onChange={(e) => { setQtdDiretoHNT(e.target.value); setErrosCampos(p => ({...p, qtdDiretoHNT: false})); }} className={`input-field ${errosCampos?.qtdDiretoHNT ? 'error' : ''} compact-input`} />
+            <label>Valor Bruto HNT (R$):</label>
+            <input type="number" placeholder="Ex: 60.00" value={valorDiretoHNT} onChange={(e) => { setValorDiretoHNT(e.target.value); setErrosCampos(p => ({...p, valorDiretoHNT: false})); }} className={`input-field ${errosCampos?.valorDiretoHNT ? 'error' : ''} compact-input`} />
+          </div>
+        ) : empresaSelecionada && modoDireto ? (
+          <div className={`delivery-box border-orange ${(errosCampos?.qtdDireto || errosCampos?.valorDireto) ? 'error-border' : ''}`}>
+            <h4 className="section-title">Fechamento Total Direto</h4>
             <label>Quantidade de Entregas Realizadas:</label>
             <input 
               type="number" 
               placeholder="Ex: 14" 
               value={qtdDireto} 
               onChange={(e) => { setQtdDireto(e.target.value); setErrosCampos(p => ({...p, qtdDireto: false})); }} 
-              className="input-field" 
-              style={{ borderColor: errosCampos?.qtdDireto ? '#f75a68' : '' }}
+              className={`input-field ${errosCampos?.qtdDireto ? 'error' : ''} spaced-input`} 
             />
             
             <label>Valor Bruto Total Acumulado (R$):</label>
@@ -534,16 +753,15 @@ function App() {
               placeholder="Ex: 210.50" 
               value={valorDireto} 
               onChange={(e) => { setValorDireto(e.target.value); setErrosCampos(p => ({...p, valorDireto: false})); }} 
-              className="input-field" 
-              style={{ borderColor: errosCampos?.valorDireto ? '#f75a68' : '' }}
+              className={`input-field ${errosCampos?.valorDireto ? 'error' : ''} spaced-input`} 
             />
           </div>
         ) : (
-          <div className="delivery-box" style={{ border: errosCampos?.listaEntregasDia ? '2px solid #f75a68' : '' }}>
+          <div className={`delivery-box ${errosCampos?.listaEntregasDia ? 'error-border' : ''}`}>
             {usaTabelaAutomatica && (
-              <div style={{ marginBottom: '15px', borderBottom: '1px dashed #29292e', paddingBottom: '15px' }}>
+              <div className="table-helper-box">
                 <span className="helper-title">🔍 Auxílio de Tabela (Opcional):</span>
-                <input type="text" placeholder="Escreva o nome do bairro para buscar..." value={buscaBairro} onChange={(e) => setBuscaBairro(e.target.value)} className="input-field" style={{ marginBottom: '5px' }} />
+                <input type="text" placeholder="Escreva o nome do bairro para buscar..." value={buscaBairro} onChange={(e) => setBuscaBairro(e.target.value)} className="input-field compact-input" />
                 
                 {sugeridos.length > 0 && (
                   <div className="suggestions-box">
@@ -556,12 +774,28 @@ function App() {
                   </div>
                 )}
 
-                <select value={bairroSelecionado} onChange={(e) => aplicarPrecoTabela(e.target.value)} className="input-field" style={{ marginTop: '10px' }}>
+                <select value={bairroSelecionado} onChange={(e) => aplicarPrecoTabela(e.target.value)} className="input-field compact-input top-margin" >
                   <option value="">-- Ou escolha na lista suspensa --</option>
-                  {Object.keys(TABELA_PRECOS).map((b) => (
+                  {Object.keys(getTabelaAtiva()).map((b) => (
                     <option key={b} value={b}>{b} (R$ {obterPrecoBairro(b).toFixed(2)})</option>
                   ))}
                 </select>
+              </div>
+            )}
+
+            {empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte' && (
+              <div className="subsection-divider">
+                <label className="subsection-label">Vincular esta corrida para:</label>
+                <div className="company-grid split-grid">
+                  <label className={`shift-chip ${empresaCorridaZonaNorte === 'Aceite' ? 'selected' : ''} company-unit-option`}>
+                    <input className="hidden-input" type="radio" name="empresaCorridaZN" checked={empresaCorridaZonaNorte === 'Aceite'} onChange={() => setEmpresaCorridaZonaNorte('Aceite')} />
+                    🥗 Aceite
+                  </label>
+                  <label className={`shift-chip ${empresaCorridaZonaNorte === 'HNT' ? 'selected' : ''} company-unit-option`}>
+                    <input className="hidden-input" type="radio" name="empresaCorridaZN" checked={empresaCorridaZonaNorte === 'HNT'} onChange={() => setEmpresaCorridaZonaNorte('HNT')} />
+                    🍗 HNT
+                  </label>
+                </div>
               </div>
             )}
 
@@ -571,74 +805,98 @@ function App() {
               placeholder="Digite o valor manualmente" 
               value={valorEntrega} 
               onChange={(e) => { setValorEntrega(e.target.value); setErrosCampos(p => ({...p, valorEntrega: false})); }} 
-              className="input-field" 
-              style={{ borderColor: errosCampos?.valorEntrega ? '#f75a68' : '' }}
+              className={`input-field ${errosCampos?.valorEntrega ? 'error' : ''}`} 
             />
 
-            {bairroSelecionado && <p style={{ color: '#ff9000', margin: '5px 0', fontSize: '13px' }}><b>Bairro ativo:</b> {bairroSelecionado}</p>}
+            {bairroSelecionado && <p className="neighborhood-active"><b>Bairro ativo:</b> {bairroSelecionado}</p>}
             
-            <button onClick={adicionarEntrega} className="btn btn-secondary" style={{ marginTop: '5px' }}>
+            <button onClick={adicionarEntrega} className="btn btn-secondary btn-margin-top">
               + Incluir Corrida no Dia
             </button>
 
             <div className="info-text">
-              <b>Hoje:</b> {listaEntregasDia.length} entregas | <b>Bruto:</b> R$ {listaEntregasDia.reduce((a,b)=>a+b, 0).toFixed(2)}
+              {empresaSelecionada === 'Aceite' && unidadeAceite === 'Zona Norte' ? (
+                <>
+                  <b>Aceite:</b> {listaEntregasDia.filter(i => i.empresa === 'Aceite').length} ent. (R$ {listaEntregasDia.filter(i => i.empresa === 'Aceite').reduce((a,b)=>a+b.valor,0).toFixed(2)}) | 
+                  <b> HNT:</b> {listaEntregasDia.filter(i => i.empresa === 'HNT').length} ent. (R$ {listaEntregasDia.filter(i => i.empresa === 'HNT').reduce((a,b)=>a+b.valor,0).toFixed(2)})
+                </>
+              ) : (
+                <>
+                  <b>Hoje:</b> {listaEntregasDia.length} entregas | <b>Bruto:</b> R$ {listaEntregasDia.reduce((a,b)=>a+b.valor, 0).toFixed(2)}
+                </>
+              )}
             </div>
           </div>
-        ))}
+        )}
 
         {avisoErroGeral && (
-          <div style={{ 
-            color: '#f75a68', backgroundColor: 'rgba(247, 90, 104, 0.1)', 
-            padding: '12px', borderRadius: '6px', margin: '15px 0 5px 0', 
-            fontSize: '14px', fontWeight: 'bold', textAlign: 'center', border: '1px solid rgba(247, 90, 104, 0.3)'
-          }}>
+          <div className="alert-box">
             {avisoErroGeral}
           </div>
         )}
 
-        <button onClick={salvarDiaNaSemana} className="btn btn-primary" style={{ marginTop: '15px' }}>
+        <button onClick={salvarDiaNaSemana} className="btn btn-primary btn-margin-top">
           💾 Salvar este Dia e Adicionar Outro
         </button>
       </section>
 
       {semana.length > 0 && (
         <section className="card">
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '10px' }}>
-            <h3 style={{ margin: 0 }}>Resumo do Fechamento</h3>
-            <span style={{ fontSize: '11px', color: '#ff9000' }}>💡 Clique em um dia para removê-lo</span>
+          <div className="summary-header">
+            <h3 className="section-title">Resumo do Fechamento</h3>
+            <span className="summary-caption">💡 Clique em um dia para removê-lo</span>
           </div>
           
           {semana.map((dia, index) => (
             <div 
               key={index} 
-              className="history-item" 
+              className="history-item clickable" 
               onClick={() => acionarExcluirDia(index, dia)}
               title="Clique para excluir este dia"
-              style={{ cursor: 'pointer', transition: 'background 0.2s' }}
             >
-              <span style={{ fontSize: '15px', fontWeight: 'bold' }}>
+              <span className="history-item-title">
                 📅 {dia?.diaSemana || ''} ({dia?.textoTurno === 'Almoço' ? '☀️ Almoço' : '🌙 Jantar'}) — {dia?.empresa || ''}
               </span>
               <div className="history-row">
-                <span>{dia?.qtdEntregas || 0} corr.</span>
-                <span>Bruto: R$ {(dia?.bruto || 0).toFixed(2)}</span>
-                <span>Taxa: R$ {(dia?.desconto || 0).toFixed(2)}</span>
-                <span style={{ color: '#00b37e', fontWeight: 'bold' }}>
-                  Líq: R$ {(dia?.liquido || 0).toFixed(2)} {dia?.garantido && '🔥'}
-                </span>
+                {dia?.detalhe && dia.detalhe.aceite ? (
+                  <>
+                    <span>
+                      🥗 Aceite: {dia.detalhe.aceite.qtd || 0} corr. — Líq: R$ {(dia.detalhe.aceite.liquido || 0).toFixed(2)} {dia.detalhe.aceite.garantido ? '🔥' : ''}
+                    </span>
+                    <span>
+                      🍗 HNT: {dia.detalhe.hnt.qtd || 0} corr. — Líq: R$ {(dia.detalhe.hnt.liquido || 0).toFixed(2)} {dia.detalhe.hnt.garantido ? '🔥' : ''}
+                    </span>
+                    <span>Bruto: R$ {(dia?.bruto || 0).toFixed(2)}</span>
+                    <span>Taxa: R$ {(dia?.desconto || 0).toFixed(2)}</span>
+                  </>
+                ) : (
+                  <>
+                    <span>{dia?.qtdEntregas || 0} corr.</span>
+                    <span>Bruto: R$ {(dia?.bruto || 0).toFixed(2)}</span>
+                    <span>Taxa: R$ {(dia?.desconto || 0).toFixed(2)}</span>
+                    <span className="history-highlight">
+                      Líq: R$ {(dia?.liquido || 0).toFixed(2)} {dia?.garantido && '🔥'}
+                    </span>
+                  </>
+                )}
               </div>
-              {dia?.garantido && (
-                <p style={{ color: '#ff9000', margin: '3px 0 0 0', fontSize: '12px', fontWeight: 'bold' }}>
-                  * Valor garantido de R$ 80,00 aplicado (Desconto: R$ {(dia?.desconto || 0).toFixed(2)}).
+              {dia?.detalhe && dia.detalhe.aceite ? (
+                <p className="history-note">
+                  * Detalhe por estabelecimento: Aceite {dia.detalhe.aceite.garantido ? '(Garantido)' : '(Líquido acima do mínimo)'} — HNT {dia.detalhe.hnt.garantido ? '(Garantido)' : '(Líquido acima do mínimo)'}.
                 </p>
+              ) : (
+                dia?.garantido && (
+                  <p className="history-note">
+                    * Valor mínimo garantido aplicado para este período/empresa.
+                  </p>
+                )
               )}
             </div>
           ))}
 
           <div className="total-box">
             <h3>Total Líquido: R$ {(totalLiquidoSemana || 0).toFixed(2)}</h3>
-            <span style={{ fontSize: '12px', color: '#f75a68' }}>Total descontado da semana: R$ {(totalDescontoSemana || 0).toFixed(2)}</span>
+            <span className="total-caption">Total descontado da semana: R$ {(totalDescontoSemana || 0).toFixed(2)}</span>
           </div>
 
           <div className="btn-group">
@@ -648,7 +906,7 @@ function App() {
             <button onClick={enviarEmail} className="btn btn-blue">
               E-mail 🔵
             </button>
-            <button onClick={() => setMostrarModalZerar(true)} className="btn btn-danger" style={{ backgroundColor: '#f75a68', color: '#fff' }}>
+            <button onClick={() => setMostrarModalZerar(true)} className="btn btn-danger danger-btn">
               Zerar Semana 🗑️
             </button>
           </div>
